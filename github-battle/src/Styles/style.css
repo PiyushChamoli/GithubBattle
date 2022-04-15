@@ -1,0 +1,507 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Custom Style */
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+span {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.flex-20 {
+  flex: 0 1 23%;
+}
+.flex-45 {
+  flex: 0 1 45%;
+}
+
+@keyframes bouncing-loader {
+  to {
+    opacity: 0.1;
+    transform: translate3d(0, -16px, 0);
+  }
+}
+
+.bouncing-loader {
+  display: flex;
+  justify-content: center;
+}
+
+.bouncing-loader > div {
+  width: 16px;
+  height: 16px;
+  margin: 3rem 0.2rem;
+  background: #8385aa;
+  border-radius: 50%;
+  animation: bouncing-loader 0.6s infinite alternate;
+}
+
+.bouncing-loader > div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.bouncing-loader > div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.active {
+  color: red !important ;
+  font-weight: 600;
+}
+
+.white {
+  color: white;
+}
+
+/* Header */
+
+.header {
+  padding-top: 30px;
+}
+
+.header a {
+  display: inline-block;
+  font-size: 21px;
+  font-weight: 600;
+  /* color: black; */
+  margin-right: 13px;
+  cursor: pointer;
+}
+
+/* Menu */
+
+.menu {
+  margin: 30px 0;
+}
+
+.menu li {
+  margin: 0 8px;
+}
+.menu h2 {
+  color: black;
+  font-weight: 500;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Main */
+
+.card {
+  background-color: #ebebeb;
+  padding: 10px 20px;
+  margin-bottom: 50px;
+}
+.card h3 {
+  text-align: center;
+  font-size: 28px;
+  margin: 15px auto;
+}
+.card img {
+  width: 180px;
+  height: 180px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+.card h2 {
+  text-align: center;
+  margin: 20px 0;
+  color: #bb3524;
+  font-size: 22px;
+  font-weight: 600;
+}
+.card li {
+  margin-bottom: 10px;
+}
+.card span {
+  margin-left: 10px;
+}
+
+/* Battle */
+
+.battle h2 {
+  text-align: center;
+  font-size: 35px;
+  margin: 40px 0;
+}
+.battle-header {
+  justify-content: center;
+}
+.battle-header li {
+  text-align: center;
+  margin: 0 40px 20px 40px;
+}
+.battle-header h3 {
+  font-size: 27px;
+  font-weight: 300;
+}
+.battle-header svg {
+  width: 100px;
+  height: 60px;
+  padding: 65px 45px;
+  margin-top: 10px;
+  border-radius: 4px;
+  background-color: #ebebeb;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+.player {
+  flex: 1;
+  margin: 0 20px;
+  padding: 10px;
+}
+
+.player-label {
+  font-size: 20px;
+  margin: 5px 0;
+  font-weight: 300;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.player-inputs .input-light {
+  background: rgba(0, 0, 0, 0.02);
+}
+.player-inputs input {
+  padding: 8px;
+  font-size: 16px;
+  flex: 2;
+  border-radius: 3px;
+  border: none;
+  box-shadow: inset 0 1px 2px rgb(0 0 0 / 15%);
+}
+
+.btn {
+  padding: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  border-radius: 3px;
+  border: none;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  max-width: 200px;
+}
+
+.player-inputs button {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+.flex-center .btn {
+  border: 1px solid black;
+  padding: 10px 30px;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.align-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box h3 {
+  margin-left: 10px;
+}
+
+.box img {
+  max-height: 60px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+.mart {
+  margin-top: 20px;
+}
+
+/* Battle Result */
+
+.result_col img {
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-right: 1rem;
+}
+
+.result_col {
+  display: flex;
+  text-align: center;
+  padding: 0.5rem 0;
+  align-items: center;
+}
+
+.result_login {
+  margin-bottom: 1.4rem;
+  font-size: 2rem;
+  color: red;
+}
+
+.result_img {
+  height: 15rem;
+  width: 15rem;
+  border-radius: 50%;
+  margin: 1rem 0;
+}
+
+.result_dark,
+.result_light {
+  background-color: #e8f1f5;
+  padding: 2rem;
+  flex: 0 1 40%;
+  text-align: center;
+  height: auto;
+}
+
+.result_dark {
+  background-color: rgb(36, 40, 42);
+  color: aliceblue;
+  height: auto;
+}
+
+.result_section {
+  display: flex;
+  justify-content: space-around;
+}
+
+.result_header {
+  padding: 1rem 0;
+}
+
+.result_score {
+  padding: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.btn_reset {
+  padding: 0.5rem 1.2rem;
+  background-color: #0f5fbb;
+  text-decoration: none;
+  display: inline-block;
+  color: aliceblue;
+  border-radius: 5px;
+}
+
+.btn_wrapper {
+  margin: 2rem 0;
+}
+
+.dark_bg {
+  background-color: black !important;
+  height: auto;
+  color: #e7e3e3;
+}
+.btn_sec_wrapper {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.btn_sec_wrapper:hover {
+  cursor: pointer;
+}
+.btn_primary_dark {
+  color: white;
+}
+.btn_primary_light {
+  color: black;
+}
+.card_dark .card {
+  background-color: #24282a;
+}
+/* .card_dark {
+  color: white !important;
+} */
+
+.result_dark {
+  background-color: rgb(36, 40, 42);
+  color: aliceblue;
+  height: auto;
+}
+
+.darkH2 h2 {
+  color: white;
+}
